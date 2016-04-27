@@ -64,6 +64,8 @@ int main(int argv, char* argc[])
         cout<<"Thinking..."<<endl;
         AITurn(board);
         cout<<"Done, press enter to continue"<<endl;
+        cin.ignore();
+        cin.get();
 
     }
     board->printBoard();
@@ -72,7 +74,7 @@ int main(int argv, char* argc[])
     {
         cout<<"You Win!!"<<endl;
     }
-    if(result = 0)
+    if(result == 0)
     {
         cout<<"Tie"<<endl;
     }
