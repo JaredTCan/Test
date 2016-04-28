@@ -16,3 +16,7 @@ Upon running the program, you'll see an Othello board set up for  a new game. Th
 Dependacies
 
   This Program does not require any 3rd party libraries
+  
+Suggested Contribution
+
+Since someone reading this will have to contribute to the code, the most usefull place would be the print statement. It could definitely be made to look nicer. However, if you feel like doing something much more challenging, the AI can also use improvement, at the moment it only picks the best possible available move for it's turn, and does not consider any future turns.
