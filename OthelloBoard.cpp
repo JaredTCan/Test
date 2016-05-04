@@ -25,13 +25,19 @@ OthelloBoard::OthelloBoard()
 
 void OthelloBoard::printBoard()
 {
+    cout<<"    ";
+    for(int c = 0; c<boardSize; c++)
+        {
+            cout<<c<<"   ";
+        }
+    cout<<endl<<"  ";
     for(int y = 0; y < boardSize; y++)
     {
         for(int c = 0; c<boardSize; c++)
         {
             cout<<"|---";
         }
-        cout<<"|"<<endl;
+        cout<<"|"<<endl<<y<<" ";
         for(int x=0; x < boardSize; x++)
         {
             cout<<"| ";
@@ -48,12 +54,12 @@ void OthelloBoard::printBoard()
                 cout<<"W ";
             }
         }
-        cout<<"|"<<endl;
+        cout<<"|"<<endl<<"  ";
     }
     for(int c = 0; c<boardSize; c++)
-    {
-        cout<"|---";
-    }
+        {
+            cout<<"|---";
+        }
     cout<<"|"<<endl;
 }
 

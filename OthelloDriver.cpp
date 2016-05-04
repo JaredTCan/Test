@@ -1,3 +1,4 @@
+
 /*Jared
  */
 
@@ -56,7 +57,20 @@ int main(int argv, char* argc[])
         }
         else
         {
-            cout<<"Invalid Move"<<endl;
+            while(!board->validMove(x,y,BLACK)){
+                cout<<"Invalid Move"<<endl;
+                cout<<"Or type x=9 y=9 to give up"<<endl;
+                cout<<"enter x pos"<<endl;
+                int x;
+                cin >> x;
+                cout<<"enter y pos"<<endl;
+                int y;
+                cin >> y;
+                if(x==9 && y==9){
+                    cout<<"you lose"<<endl;
+                    return 0;
+                }
+            }
         }
 
         board->printBoard();
@@ -73,13 +87,16 @@ int main(int argv, char* argc[])
     if(result < 0)
     {
         cout<<"You Win!!"<<endl;
+        return 0;
     }
     if(result == 0)
     {
         cout<<"Tie"<<endl;
+        return 0;
     }
     if(result > 0)
     {
         cout<<"you lose"<<endl;
+        return 0;
     }
 }
